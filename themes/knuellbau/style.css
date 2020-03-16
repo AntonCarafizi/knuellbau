@@ -53,6 +53,10 @@ svg {
   height: 40px;
 }
 
+svg.left {
+  left: 0;
+}
+
 svg.right {
   right: 0;
 }
@@ -95,6 +99,10 @@ polygon {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 10px solid #fff;
+}
+
+.container {
+  max-width: 960px !important;
 }
 
 .dropdown-item.active, .dropdown-item:active {

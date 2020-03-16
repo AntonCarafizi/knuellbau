@@ -14,7 +14,7 @@
 <header>
     <div class="top_headbar">
         <svg class="right position-absolute">
-            <polygon class="right position-absolute" points="150 0, 1200 0,1200 320" />
+            <polygon class="right position-absolute" points="300 0, 1200 0,1200 275" />
         </svg>
         <div class="socialbox text-right">
             <a class="share-button"
