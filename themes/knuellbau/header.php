@@ -14,10 +14,10 @@
 <header>
     <div class="top_headbar">
         <svg class="left position-absolute">
-            <polygon class="right position-absolute" points="0 0, 210 0, 80 40, 0 40, 0 0" />
+            <polygon class="right position-absolute" points="0 0, 210 0, 80 40, 0 40, 0 0"/>
         </svg>
         <svg class="right position-absolute">
-            <polygon class="right position-absolute" points="300 0, 1200 0,1200 40, 430 40" />
+            <polygon class="right position-absolute" points="300 0, 1200 0,1200 40, 430 40"/>
         </svg>
         <div class="socialbox text-right">
             <a class="share-button"
@@ -73,7 +73,7 @@
                     <span class="bold align-self-center"><?php echo get_option('company_email'); ?></span></a>
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3 text-center my-3 d-none d-md-flex align-items-end justify-content-center">
-                <a title="<?php _e('Call'); ?>" href="tel:01739346186" class="header-link text-left d-flex">
+                <a href="#" class="header-link text-left d-flex">
                     <i class="fa fa-phone fa-2x mr-2 align-self-center"></i>
                     <div>
                         <span class="bold">Tel: <?php echo get_option('company_phone_number'); ?></span><br>
@@ -85,52 +85,54 @@
     </div>
 </header>
 <nav class="navbar navbar-expand-md navbar-dark d-flex justify-content-between">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAddress"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-map-marker fa-2x align-self-center"></i>
-    </button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEmail"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-envelope fa-2x align-self-center"></i>
-    </button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPhone"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-phone fa-2x align-self-center"></i>
-    </button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars fa-2x"></i>
-    </button>
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAddress"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-map-marker fa-2x align-self-center"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEmail"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-envelope fa-2x align-self-center"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPhone"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-phone fa-2x align-self-center"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
 
-    <div id="navbarAddress" class="collapse w-100 text-center">
-        <address>
-            <a href="<?php echo get_permalink(get_post(683)); ?>#maps">
-                <span class="bold text-light btn btn-light red mt-2"><?php echo get_option('company_address'); ?>, <?php echo get_option('company_city'); ?></span>
+        <div id="navbarAddress" class="collapse w-100 text-center">
+            <address>
+                <a href="<?php echo get_permalink(get_post(683)); ?>#maps">
+                    <span class="bold text-light btn btn-light red mt-2"><?php echo get_option('company_address'); ?>, <?php echo get_option('company_city'); ?></span>
+                </a>
+            </address>
+        </div>
+        <div id="navbarEmail" class="collapse w-100 text-center">
+            <a title="<?php _e('Write Email'); ?>" href="mailto:<?php echo get_option('company_email'); ?>">
+                <span class="bold text-light btn btn-light red mt-2 align-self-center"><?php echo get_option('company_email'); ?></span>
             </a>
-        </address>
-    </div>
-    <div id="navbarEmail" class="collapse w-100 text-center">
-        <a title="<?php _e('Write Email'); ?>" href="mailto:<?php echo get_option('company_email'); ?>">
-            <span class="bold text-light btn btn-light red mt-2 align-self-center"><?php echo get_option('company_email'); ?></span>
-        </a>
-    </div>
-    <div id="navbarPhone" class="collapse w-100 text-center">
-        <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_phone_number'); ?>">
-            <span class="bold text-light btn btn-light red mt-2">Tel: <?php echo get_option('company_phone_number'); ?></span>
-        </a>
-        <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_fax_number'); ?>">
-            <span class="bold text-light btn btn-light red mt-2">Fax: <?php echo get_option('company_fax_number'); ?></span>
-        </a>
-    </div>
+        </div>
+        <div id="navbarPhone" class="collapse w-100 text-center">
+            <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_phone_number'); ?>">
+                <span class="bold text-light btn btn-light red mt-2">Tel: <?php echo get_option('company_phone_number'); ?></span>
+            </a>
+            <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_fax_number'); ?>">
+                <span class="bold text-light btn btn-light red mt-2">Fax: <?php echo get_option('company_fax_number'); ?></span>
+            </a>
+        </div>
 
-    <?php
-    wp_nav_menu(array(
-            'theme_location' => 'primary',
-            'container' => 'div',
-            'container_class' => 'collapse navbar-collapse justify-content-md-center',
-            'container_id' => 'navbarCollapse',
-            'menu_class' => 'nav navbar-nav',
-            'walker' => new wp_bootstrap_navwalker())
-    );
-    ?>
+        <?php
+        wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse justify-content-md-center',
+                'container_id' => 'navbarCollapse',
+                'menu_class' => 'nav navbar-nav',
+                'walker' => new wp_bootstrap_navwalker())
+        );
+        ?>
+    </div>
 </nav>
