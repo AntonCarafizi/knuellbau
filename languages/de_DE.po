@@ -17350,6 +17350,22 @@ msgstr "Email schreiben"
 msgid "Call"
 msgstr "Anrufen"
 
-#: wp-content/themes/knuellbau/header.php:18
-msgid "Share on"
-msgstr "Teilen auf"
+#: wp-content/themes/knuellbau/header.php:21
+msgid "Share on Facebook"
+msgstr "Auf Facebook teilen"
+
+#: wp-content/themes/knuellbau/header.php:28
+msgid "Share on Twitter"
+msgstr "Auf Twitter teilen"
+
+#: wp-content/themes/knuellbau/header.php:35
+msgid "Share on Pinterest"
+msgstr "Auf Pinterest teilen"
+
+#: wp-content/themes/knuellbau/header.php:42
+msgid "Share on Linkedin"
+msgstr "Auf Linkedin teilen"
+
+#: wp-content/themes/knuellbau/404.php:7
+msgid "Go to Homepage"
+msgstr "Zur Startseite"

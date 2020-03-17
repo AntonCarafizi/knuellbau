@@ -13,33 +13,36 @@
 <body <?php body_class(); ?>>
 <header>
     <div class="top_headbar">
+        <svg class="left position-absolute">
+            <polygon class="right position-absolute" points="0 0, 210 0, 80 40, 0 40, 0 0" />
+        </svg>
         <svg class="right position-absolute">
-            <polygon class="right position-absolute" points="300 0, 1200 0,1200 275" />
+            <polygon class="right position-absolute" points="300 0, 1200 0,1200 40, 430 40" />
         </svg>
         <div class="socialbox text-right">
             <a class="share-button"
-               title="<?php _e('Share on'); ?> Facebook"
+               title="<?php _e('Share on Facebook'); ?>"
                href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_html(site_url()); ?>&t=<?php echo esc_html(get_bloginfo('description')); ?>"
                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                target="_blank">
                 <i class="fa fa-facebook-square fa-2x text-white mx-2 my-1"></i>
             </a>
             <a class="share-button"
-               title="<?php _e('Share on'); ?> Twitter" class="twitter-share-button"
+               title="<?php _e('Share on Twitter'); ?>" class="twitter-share-button"
                href="http://twitter.com/share?text=<?php echo esc_html(get_bloginfo('name')); ?>&url=<?php echo esc_html(site_url()); ?>"
                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                target="_blank">
                 <i class="fa fa-twitter fa-2x text-white mx-2 my-1" aria-hidden="true"></i>
             </a>
             <a class="share-button"
-               title="<?php _e('Share on'); ?> Pinterest" class="twitter-share-button"
+               title="<?php _e('Share on Pinterest'); ?>" class="twitter-share-button"
                href="http://pinterest.com/pin/create/button/?url=<?php echo esc_html(site_url()); ?>&description=<?php echo esc_html(get_bloginfo('name')); ?>"
                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                target="_blank">
                 <i class="fa fa-pinterest fa-2x text-white mx-2 my-1" aria-hidden="true"></i>
             </a>
             <a class="share-button"
-               title="<?php _e('Share on'); ?> Linkedin"
+               title="<?php _e('Share on Linkedin'); ?>"
                href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo esc_html(site_url()); ?>&title=<?php echo esc_html(get_bloginfo('name')); ?>"
                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                target="_blank">

@@ -35,7 +35,8 @@ h1, h2, h3, h4, h5, h6, p, li, footer span {
   font-family: 'Hypatia-bold';
 }
 
-a:hover {
+header a:hover,
+footer a:hover {
   text-decoration: none !important;
   color: $gray !important;
 }
@@ -58,16 +59,17 @@ footer span {
 }
 
 svg {
-  width: 1200px;
   height: 40px;
 }
 
 svg.left {
   left: 0;
+  width: 210px;
 }
 
 svg.right {
   right: 0;
+  width: 1200px;
 }
 
 polygon {
