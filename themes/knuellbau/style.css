@@ -26,8 +26,11 @@ h1, h2, h3, h4, h5, h6, p, li, footer span {
   font-family: "Hypatia-bold";
 }
 
-header a:hover,
-footer a:hover {
+a:hover {
+  color: #fff;
+}
+
+header a:hover {
   text-decoration: none !important;
   color: #666666 !important;
 }
@@ -49,30 +52,14 @@ footer span {
   color: #fff;
 }
 
-svg {
-  height: 40px;
-}
-
-svg.left {
-  left: 0;
-  width: 210px;
-}
-
-svg.right {
-  right: 0;
-  width: 1200px;
-}
-
-polygon {
-  fill: #666666;
-  stroke: #666666;
-  stroke-width: 1;
-}
-
 .top_headbar {
   width: 100%;
   margin: 0 auto;
   background-size: 100% 100%;
+}
+
+.logo-div {
+  z-index: 2;
 }
 
 .header-link {
@@ -85,6 +72,10 @@ polygon {
 
 #menu-main > .menu-item.active > a {
   font-weight: bold;
+}
+
+.socialbox {
+  background-color: #666666;
 }
 
 #menu-main > .menu-item.active > a:after {
@@ -101,10 +92,6 @@ polygon {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 10px solid #fff;
-}
-
-.container {
-  max-width: 960px !important;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -247,10 +234,6 @@ textarea {
     display: flex;
     justify-content: space-between;
   }
-
-  svg {
-    display: none;
-  }
 }
 @media (min-width: 767.98px) {
   .wp-block-image img {
@@ -306,7 +289,8 @@ textarea {
   }
 
   .nav-item:hover,
-.nav-link:hover {
+.nav-link:hover,
+.btn:hover {
     background-color: #7d0d11 !important;
   }
 
@@ -318,7 +302,7 @@ textarea {
 
   .share-button {
     opacity: 0.5;
-    transition-duration: 0.5s;
+    transition-duration: 0.5s !important;
   }
 
   .share-button:hover {
