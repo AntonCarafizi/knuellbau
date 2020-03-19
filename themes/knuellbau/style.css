@@ -118,7 +118,7 @@ footer span {
   border-bottom: 15px solid transparent;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.nav-link {
   color: white !important;
   text-transform: uppercase;
   font-family: "Hypatia-semibold" !important;
@@ -184,7 +184,7 @@ footer span {
     font-weight: bold;
   }
 
-  #menu-main a:focus {
+  a:focus {
     background-color: #fff;
     color: #9f1116 !important;
   }
@@ -284,7 +284,8 @@ textarea {
   }
 
   .nav-item,
-.nav-link {
+.nav-link,
+header a {
     transition-duration: 0.5s;
   }
 
