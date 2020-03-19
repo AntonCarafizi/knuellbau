@@ -13,8 +13,12 @@
 <body <?php body_class(); ?>>
 <header>
     <div class="top_headbar">
-        <?php $socialbox = '[socialbox name="' . get_bloginfo('name') . '" description="' . get_bloginfo('description') . '"][/socialbox]';
-        echo do_shortcode($socialbox); ?>
+        <?php if (is_plugin_active('socialbox/socialbox.php')) :
+            $get_bloginfo_name = get_bloginfo('name');
+            $get_bloginfo_description = get_bloginfo('description');
+            $socialbox = '[socialbox name="' . $get_bloginfo_name . '" description="' . $get_bloginfo_description . '"][/socialbox]';
+            echo do_shortcode($socialbox);
+        endif; ?>
         <div class="clearfix"></div>
     </div>
     <div class="container py-2">
@@ -51,52 +55,52 @@
     </div>
 </header>
 <nav class="navbar navbar-expand-md navbar-dark d-flex justify-content-between">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAddress"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-map-marker fa-2x align-self-center"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEmail"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-envelope fa-2x align-self-center"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPhone"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-phone fa-2x align-self-center"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-bars fa-2x"></i>
-        </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAddress"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-map-marker fa-2x align-self-center"></i>
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEmail"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-envelope fa-2x align-self-center"></i>
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPhone"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-phone fa-2x align-self-center"></i>
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars fa-2x"></i>
+    </button>
 
-        <div id="navbarAddress" class="collapse w-100 text-center">
-            <address>
-                <a href="<?php echo get_permalink(get_post(683)); ?>#maps">
-                    <span class="bold text-light btn btn-light red mt-2"><?php echo get_option('company_address'); ?>, <?php echo get_option('company_city'); ?></span>
-                </a>
-            </address>
-        </div>
-        <div id="navbarEmail" class="collapse w-100 text-center">
-            <a title="<?php _e('Write Email'); ?>" href="mailto:<?php echo get_option('company_email'); ?>">
-                <span class="bold text-light btn btn-light red mt-2 align-self-center"><?php echo get_option('company_email'); ?></span>
+    <div id="navbarAddress" class="collapse w-100 text-center">
+        <address>
+            <a href="<?php echo get_permalink(get_post(683)); ?>#maps">
+                <span class="bold text-light btn btn-light red mt-2"><?php echo get_option('company_address'); ?>, <?php echo get_option('company_city'); ?></span>
             </a>
-        </div>
-        <div id="navbarPhone" class="collapse w-100 text-center">
-            <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_phone_number'); ?>">
-                <span class="bold text-light btn btn-light red mt-2">Tel: <?php echo get_option('company_phone_number'); ?></span>
-            </a>
-            <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_fax_number'); ?>">
-                <span class="bold text-light btn btn-light red mt-2">Fax: <?php echo get_option('company_fax_number'); ?></span>
-            </a>
-        </div>
+        </address>
+    </div>
+    <div id="navbarEmail" class="collapse w-100 text-center">
+        <a title="<?php _e('Write Email'); ?>" href="mailto:<?php echo get_option('company_email'); ?>">
+            <span class="bold text-light btn btn-light red mt-2 align-self-center"><?php echo get_option('company_email'); ?></span>
+        </a>
+    </div>
+    <div id="navbarPhone" class="collapse w-100 text-center">
+        <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_phone_number'); ?>">
+            <span class="bold text-light btn btn-light red mt-2">Tel: <?php echo get_option('company_phone_number'); ?></span>
+        </a>
+        <a title="<?php _e('Call'); ?>" href="tel:<?php echo get_option('company_fax_number'); ?>">
+            <span class="bold text-light btn btn-light red mt-2">Fax: <?php echo get_option('company_fax_number'); ?></span>
+        </a>
+    </div>
 
-        <?php
-        wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => 'div',
-                'container_class' => 'collapse navbar-collapse justify-content-md-center',
-                'container_id' => 'navbarCollapse',
-                'menu_class' => 'nav navbar-nav',
-                'walker' => new wp_bootstrap_navwalker())
-        );
-        ?>
+    <?php
+    wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'container' => 'div',
+            'container_class' => 'collapse navbar-collapse justify-content-md-center',
+            'container_id' => 'navbarCollapse',
+            'menu_class' => 'nav navbar-nav',
+            'walker' => new wp_bootstrap_navwalker())
+    );
+    ?>
 </nav>
