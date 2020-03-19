@@ -184,7 +184,7 @@ footer span {
     font-weight: bold;
   }
 
-  a:focus {
+  .nav-link:focus {
     background-color: #fff;
     color: #9f1116 !important;
   }
