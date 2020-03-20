@@ -17350,6 +17350,10 @@ msgstr "Email schreiben"
 msgid "Call"
 msgstr "Anrufen"
 
+#: wp-content/themes/knuellbau/404.php:6
+msgid "Error"
+msgstr "Fehler"
+
 #: wp-content/themes/knuellbau/404.php:7
 msgid "Go to Homepage"
 msgstr "Zur Startseite"
