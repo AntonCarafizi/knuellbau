@@ -23,7 +23,10 @@
     </div>
     <div class="container py-2">
         <div class="row">
-            <div class="logo-div col-sm-12 col-md-4 col-lg-3 text-center my-2"><?php the_custom_logo(); ?></div>
+            <?php if (get_custom_logo()) : ?>
+                <div class="logo-div col-sm-12 col-md-4 col-lg-3 text-center my-2"><?php the_custom_logo(); ?></div>
+            <?php endif; ?>
+            <?php if (get_option('company_address') or get_option('company_city')) : ?>
             <div class="col-sm-4 col-md-3 col-lg-3 text-center my-3 d-none d-md-flex align-items-end justify-content-center">
                 <a title="<?php _e('Show on map'); ?>" href="<?php echo get_permalink(get_post(683)); ?>#maps"
                    class="header-link text-left d-flex">
@@ -36,12 +39,16 @@
                     </div>
                 </a>
             </div>
+            <?php endif; ?>
+            <?php if (get_option('company_email')) : ?>
             <div class="col-sm-4 col-md-3 col-lg-3 text-center my-4 d-none d-md-flex align-items-end justify-content-center">
                 <a title="<?php _e('Write Email'); ?>" href="mailto:info@knuell-bau.de"
                    class="header-link text-center d-flex">
                     <i class="fa fa-envelope fa-2x mr-2 align-self-center"></i>
                     <span class="bold align-self-center"><?php echo get_option('company_email'); ?></span></a>
             </div>
+            <?php endif; ?>
+            <?php if (get_option('company_phone_number') or get_option('company_fax_number')) : ?>
             <div class="col-sm-4 col-md-3 col-lg-3 text-center my-3 d-none d-md-flex align-items-end justify-content-center">
                 <a href="#" class="header-link text-left d-flex">
                     <i class="fa fa-phone fa-2x mr-2 align-self-center"></i>
@@ -51,6 +58,7 @@
                     </div>
                 </a>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </header>
