@@ -6,33 +6,42 @@ Version: 1.0
 License: GNU General Public License
 License URI: license.txt
 */
+
+$red: #9f1116;
+$white: #fff;
+$gray: #666666;
+$duration: 0.5s;
+
 @font-face {
   font-family: Hypatia-regular;
   src: url(../fonts/hypatiasanspro-regular.otf);
 }
+
 @font-face {
   font-family: Hypatia-bold;
   src: url(../fonts/hypatiasanspro-bold.otf);
 }
+
 @font-face {
   font-family: Hypatia-semibold;
   src: url(../fonts/hypatiasanspro-semibold.otf);
 }
+
 h1, h2, h3, h4, h5, h6, p, li, footer span {
-  font-family: "Hypatia-regular" !important;
+  font-family: 'Hypatia-regular' !important;
 }
 
 .bold {
-  font-family: "Hypatia-bold";
+  font-family: 'Hypatia-bold';
 }
 
 a:hover {
-  color: #fff;
+  color: $white;
 }
 
 header a:hover {
   text-decoration: none !important;
-  color: #666666 !important;
+  color: $gray !important;
 }
 
 iframe {
@@ -44,12 +53,12 @@ address {
 }
 
 footer {
-  background-color: #9f1116;
+  background-color: $red;
 }
 
 footer a,
 footer span {
-  color: #fff;
+  color: $white;
 }
 
 .top_headbar {
@@ -63,19 +72,15 @@ footer span {
 }
 
 .header-link {
-  color: #9f1116;
+  color: $red;
 }
 
 .menu-item {
   position: relative;
 }
 
-#menu-main > .menu-item.active > a {
-  font-weight: bold;
-}
-
 .socialbox {
-  background-color: #666666;
+  background-color: $gray;
 }
 
 #menu-main > .menu-item.active > a:after {
@@ -91,11 +96,12 @@ footer span {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 10px solid #fff;
+  border-bottom: 10px solid $white;
 }
 
+
 .dropdown-item.active, .dropdown-item:active {
-  background-color: #9f1116 !important;
+  background-color: $red !important;
 }
 
 .dropdown-menu {
@@ -114,14 +120,14 @@ footer span {
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
-  border-right: 10px solid #fff;
+  border-right: 10px solid $white;
   border-bottom: 15px solid transparent;
 }
 
 .nav-link {
-  color: white !important;
+  color: rgba(255, 255, 255, 1) !important;
   text-transform: uppercase;
-  font-family: "Hypatia-semibold" !important;
+  font-family: 'Hypatia-semibold' !important;
 }
 
 .card {
@@ -129,25 +135,25 @@ footer span {
 }
 
 .dropdown-menu {
-  background-color: #9f1116 !important;
+  background-color: $red !important;
 }
 
 .dropdown-menu a {
-  color: #fff;
+  color: $white;
 }
 
 .fa-caret-right {
-  color: #9f1116;
-  margin-right: 0.75em;
+  color: $red;
+  margin-right: .75em;
 }
 
 .color-red {
-  color: #9f1116 !important;
+  color: $red !important;
 }
 
 .red {
-  background-color: #9f1116 !important;
-  border-color: #9f1116 !important;
+  background-color: $red !important;
+  border-color: $red !important;
 }
 
 .error404 main {
@@ -155,38 +161,34 @@ footer span {
 }
 
 #cn-notice-text {
-  font-family: "Hypatia-regular";
+  font-family: 'Hypatia-regular';
   font-size: 1.2em;
 }
 
 #cn-accept-cookie {
-  font-family: "Hypatia-semibold";
-  background-color: #9f1116;
+  font-family: 'Hypatia-semibold';
+  background-color: $red;
   background-image: none;
 }
 
 @media (max-width: 767.98px) {
   .top_headbar {
-    background-color: #666666;
+    background-color: $gray;
     background-image: none;
   }
 
   nav {
-    background-color: #9f1116 !important;
+    background-color: $red !important;
   }
 
   .nav-item:not(:last-of-type),
-.nav-link:not(:last-of-type) {
-    border-bottom: 1px solid #fff;
+  .nav-link:not(:last-of-type) {
+    border-bottom: 1px solid $white;
   }
 
-  #menu-main > .menu-item.active > a {
-    font-weight: bold;
-  }
-
-  .nav-link:focus {
-    background-color: #fff;
-    color: #9f1116 !important;
+  .nav-link:focus, {
+    background-color: $white;
+    color: $red !important;
   }
 
   #menu-main > .menu-item.active > a:after {
@@ -204,7 +206,7 @@ footer span {
     width: 0;
     height: 0;
     border-top: 15px solid transparent;
-    border-right: 10px solid #fff;
+    border-right: 10px solid $white;
     border-bottom: 15px solid transparent;
   }
 
@@ -217,7 +219,7 @@ footer span {
   }
 
   input,
-textarea {
+  textarea {
     width: 100%;
   }
 
@@ -226,7 +228,7 @@ textarea {
   }
 
   .navbar-dark .navbar-toggler {
-    color: white !important;
+    color: rgba(255, 255, 255, 1) !important;
   }
 
   .socialbox {
@@ -234,18 +236,22 @@ textarea {
     display: flex;
     justify-content: space-between;
   }
+
 }
+
+
 @media (min-width: 767.98px) {
+
   .wp-block-image img {
     margin: 20px;
   }
 
   nav {
-    background-color: #9f1116;
+    background-color: $red;
   }
 
   main {
-    background-image: url("/wp-content/uploads/2019/11/window-left.jpeg"), url("/wp-content/uploads/2019/11/window-right.jpeg");
+    background-image: url('/wp-content/uploads/2019/11/window-left.jpeg'), url('/wp-content/uploads/2019/11/window-right.jpeg');
     background-position: top left, top right;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -253,7 +259,7 @@ textarea {
 
   .page-id-859 .container .clear {
     background-image: url("/wp-content/uploads/2019/11/background-4.jpeg");
-    background-color: #fff;
+    background-color: $white;
     background-position: top center;
     background-size: 80%;
     background-repeat: no-repeat;
@@ -262,7 +268,7 @@ textarea {
 
   .page-id-680 .container .clear {
     background-image: url("/wp-content/uploads/2019/12/background-2.jpeg");
-    background-color: #fff;
+    background-color: $white;
     background-position: bottom center;
     background-repeat: no-repeat;
     height: 695px;
@@ -270,28 +276,28 @@ textarea {
 
   .page-id-411 .container .background-top {
     background-image: url("/wp-content/uploads/2019/11/logo.png");
-    background-color: #fff;
+    background-color: $white;
     background-position: top center;
     background-repeat: no-repeat;
     height: 319px;
   }
 
   .wpcf7 {
-    background-image: url("/wp-content/uploads/2019/11/background-1.jpeg");
+    background-image: url('/wp-content/uploads/2019/11/background-1.jpeg');
     background-size: 60%;
     background-position: bottom right;
     background-repeat: no-repeat;
   }
 
   .nav-item,
-.nav-link,
-header a {
-    transition-duration: 0.5s;
+  .nav-link,
+  header a {
+    transition-duration: $duration;
   }
 
   .nav-item:hover,
-.nav-link:hover,
-.btn:hover {
+  .nav-link:hover,
+  .btn:hover {
     background-color: #7d0d11 !important;
   }
 
@@ -303,12 +309,11 @@ header a {
 
   .share-button {
     opacity: 0.5;
-    transition-duration: 0.5s !important;
+    transition-duration: $duration!important;
   }
 
   .share-button:hover {
     opacity: 1;
   }
-}
 
-/*# sourceMappingURL=style.css.map */
+}
